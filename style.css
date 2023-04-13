@@ -1,0 +1,615 @@
+  
+
+@media only screen and (max-width: 700px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    #header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #items{
+        display: flex;
+        flex-direction: column;
+    }
+    #shoes{
+        display: flex;
+        flex-direction: column;
+    }
+    #shoes_table{
+        display: flex;
+        flex-direction: column;
+    }
+    #shoes_row1{
+        display: flex;
+        flex-direction: column;
+    }
+    #shoes_row2{
+        display: flex;
+        flex-direction: column;
+    }
+    #shirts{
+        display: flex;
+        flex-direction: column;
+    }
+    #shirts_table{
+        display: flex;
+        flex-direction: column;
+    }
+    #shirts_row1{
+        display: flex;
+        flex-direction: column;
+    }
+    #shirts_row2{
+        display: flex;
+        flex-direction: column;
+    }
+    #pants{
+        display: flex;
+        flex-direction: column;
+    }
+    #pants_table{
+        display: flex;
+        flex-direction: column;
+    }
+    #pants_row1{
+        display: flex;
+        flex-direction: column;
+    }
+    #pants_row2{
+        display: flex;
+        flex-direction: column;
+    }
+    #item_page {
+        flex-wrap: wrap;
+        justify-content: column;
+    }
+    #newpage_photo {
+        flex-wrap: wrap;
+        justify-content: column;
+    }
+    #newpage_text {
+        flex-wrap: wrap;
+        justify-content: column;
+    }
+}
+body{
+    background: linear-gradient(0deg, rgba(188,187,186,1) 6%, rgba(255,246,214,1) 100%);
+}
+html {
+    scroll-behavior: smooth;
+}
+
+hr{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 5px;
+    background-image: linear-gradient(90deg, rgb(255, 255, 47), rgb(254, 206, 15));
+    display: block;
+    border-radius: 10px;
+    border: 0;
+}
+/* Nav bar properties */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background: linear-gradient(0deg, rgba(188,187,186,1) 6%, rgba(255,246,214,1) 100%);
+    height: 5em;
+    width: 100%;
+    align-items: center;
+    position: static; /* Sticky/fixed navbar */
+    top: 0;
+}
+#navbar_icon{
+    width: 10em;
+    height: 4em;
+    display: flex;
+}
+
+.navMenu {
+    display: flex;
+  position: flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navMenu a {
+  color: #303030;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+    /* hover 2 lines animation */
+  .navMenu a:before
+  {
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      width: 0px;
+      height: 1.5px;
+      background: #ffffff;     
+      content: "";
+      opacity: 1;
+      transition: all 0.5s;
+  }
+  .navMenu a:after
+  {
+      position: absolute;
+      top: 0%;
+      right: 0px;
+      width: 0px;
+      height: 1.5px;
+      background: #ffffff;     
+      content: "";
+      opacity: 1;
+      transition: all 0.5s;
+      margin-top: -1.5px;
+  }
+  .navMenu a:hover{
+    color: #cd0000;
+  }
+  .navMenu a:hover:before , .navMenu a:hover:after
+  {
+    width: 100%;
+  }
+ 
+  
+/* this is a menu bar */
+.container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .buttons{
+    display: flex;
+    width: 40px;
+    height: 45px;
+    background: linear-gradient(0deg, rgba(188,187,186,1) 6%, rgba(255,246,214,1) 100%);
+    border-radius: 25%;
+    align-items: center;
+    justify-content: center;
+  }
+  #bars{
+    display: inline-block;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .change .navMenu_side{
+    opacity: 100;
+    transition-duration: 1.5s;
+  }
+/* this is the side header */
+
+#side_header{
+    display: flex;
+    flex-direction: column;
+    height: 5em;
+    width: 10%;
+    position: fixed;
+    top: 50%;
+    margin-left: 0.3%;
+    align-items: baseline;
+    justify-content: center;
+   
+}
+
+.navMenu_side {
+    background: linear-gradient(180deg, rgba(188,187,186,1) 6%, rgba(255,246,214,1) 100%);
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.navMenu_side a {
+  color: #303030;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: flex;
+  width: 80px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu_side a:hover {
+  color: #fddb3a;
+}
+
+
+/* Animations: */
+@keyframes header_animation {
+    from {
+        width: 0%;
+      }
+      to {
+        width: 100%;
+      }
+  }
+  
+  /* The element to apply the animation to */
+  #header {
+    margin-left: auto;
+    margin-right: auto;   
+    animation-name: header_animation;
+    animation-duration: 5s;
+  }
+
+  @keyframes photo_animation {
+    from {
+        width: 0%;
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+        width: 80%px;
+      }
+  }
+  
+  /* The element to apply the animation to */
+  #saucony_logo {
+    margin-left: auto;
+    margin-right: auto;   
+    animation-name: photo_animation;
+    animation-duration: 5s;
+  }
+  @keyframes item_page_animation {
+    from {
+        width: 0%;
+      }
+      to {
+        width: 80%px;
+      }
+  }
+  
+  /* The element to apply the animation to */
+  #item_page {
+    margin-left: auto;
+    margin-right: auto;   
+    animation-name: item_page_animation;
+    animation-duration: 2s;
+  }
+  @keyframes item_header_animation {
+        0%   {opacity: 100%;}
+        50%   {opacity: 0%;}
+        100%   {opacity: 100%;}
+  }
+  
+  /* The element to apply the animation to */
+  .items_head:hover {
+    margin-left: auto;
+    margin-right: auto;   
+    animation-name: item_header_animation;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes item_hover_animation {
+    0%   {box-shadow: 0px 0px 12px 9px rgba(209,191,255,1);}
+    50%   {box-shadow: 0px 0px 12px 9px rgb(255, 99, 21);}
+    100%   {box-shadow: 0px 0px 12px 9px rgba(209,191,255,1);}
+}
+
+/* The element to apply the animation to */
+#newpage_photo:hover {  
+    animation-name: item_hover_animation;
+    animation-duration: 1.5s;
+}
+
+/* The element to apply the animation to */
+.buy_now:hover {  
+    animation-name: item_hover_animation;
+    animation-duration: 1.5s;
+}
+
+
+/* ~~~~~Main css */
+
+
+.tops{
+    background-color: rgb(202, 197, 197);
+    color: black;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition:  ease-in 0.3s;
+    transition: ease-out 1.5s;
+    max-height: 40em;
+}
+.tops:hover{
+    color: brown;
+    background-color: azure;
+}
+#greetings{
+    margin-top: -150px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.copy-wrapper {
+    border: 0.15rem solid;
+    padding: 1rem;
+    max-width: 55em;
+    margin: 0 auto;
+    text-align: center;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+#video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#running_video{
+    border-radius: 25px;
+}
+#saucony_logo{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.welcoming{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+#social_media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#connect_social{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.icons{
+    width: 4em;
+    height: 4em;
+    border-radius: 25px;
+}
+.icons:hover{
+    animation-name: item_hover_animation;
+    animation-duration: 1.5s;
+}
+#shoes{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.shoes_picture{
+    width: 22em;
+    height: 18em;
+}
+#items{
+    display: flex;
+    justify-content: center;
+}
+#shoes_table{
+    border-spacing: 5em;
+    border: 5px solid black;
+}
+td{
+    border: 3px solid black;
+    background-color: #fddb3a;
+    border-radius: 15px;
+}
+.items_head{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14vw;
+    display: flex;
+    justify-content: space-around;
+}
+.newpage_product_name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vw;
+    display: flex;
+    justify-content: space-around;
+}
+.shoes_name{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.shoes_price{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    -webkit-text-stroke: 1px black;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+.buy_now{
+    background-color: rgb(55, 55, 230);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    color: black;
+    height: 2em;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    font-size: 1.5em;
+}
+.buy_now:hover{
+    color: white;
+    background-color: blue;
+}
+#shirts_table{
+    border-spacing: 5em;
+    border: 5px solid black;
+}
+.shirts_picture{
+    width: 22em;
+    height: 18em;
+}
+.shirts_name{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.shirts_price{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    -webkit-text-stroke: 1px black;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#pants_table{
+    border-spacing: 5em;
+    border: 5px solid black;
+}
+.pants_picture{
+    width: 22em;
+    height: 18em;
+}
+.pants_name{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.pants_price{
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    -webkit-text-stroke: 1px black;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+#item_page{
+    margin-top: 10em;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 12px 9px rgb(226, 214, 255);
+    background: linear-gradient(180deg, rgba(188,187,186,1) 6%, rgba(255,246,214,1) 100%);
+    width: 80vw;
+    margin-left: 10vmax;
+    justify-content: space-evenly;
+}
+#newpage_photo{
+    width: 22em;
+    height: 18em;
+    margin-right: 5vw;
+    box-shadow: 0px 0px 12px 9px rgba(209,191,255,1);
+}
+#newpage_text{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#newpage_top_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#newpage_product_desc{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.select_size{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.product_size{
+    background: linear-gradient(180deg, rgba(188,187,186,1) 6%, rgba(255,246,214,1) 100%);
+    border-radius: 20%;
+    margin: 1em;
+    font-size: 1.5em;
+}
+.product_size:hover{
+    color: white;
+    background: rgb(255, 209, 148);
+}
+.product_size:focus{
+    background: rgb(255, 209, 148);
+}
+#newpage_select_size{
+    display: flex;
+    justify-content: space-evenly;
+}
+#newpage_shoe_table{
+    width: 30vw;
+}
+.newpage_selected_item{
+    background-color: rgb(55, 255, 178);
+}
+#shirts{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#newpage_shirt_table{
+    width: 30vw;
+}
+#shirts_table{
+    border-spacing: 5em;
+    border: 5px solid black;
+}
+#pants{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#newpage_pants_table{
+    width: 30vw;
+}
+#pants_table{
+    border-spacing: 5em;
+    border: 5px solid black;
+}
+
